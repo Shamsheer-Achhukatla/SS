@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHAMSHEER A | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- PASSWORD OVERLAY -->
+  <div id="password-overlay" class="password-overlay">
+    <div class="password-card glass-card">
+      <h2 class="password-title">Welcome, SHAMSHEER</h2>
+      <p class="password-subtitle">
+        Enter the access key to view this portfolio.
+      </p>
+
+      <input
+        id="password-input"
+        type="password"
+        placeholder="Enter password"
+        autocomplete="off"
+      />
+
+      <button id="password-submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:0.7rem;">
+        Unlock
+      </button>
+
+      <p id="password-error" class="password-error">
+        Wrong password. Try again.
+      </p>
+
+      <p class="password-hint">
+        (You can change the password later in <code>script.js</code>.)
+      </p>
+    </div>
+  </div>
+  <!-- END PASSWORD OVERLAY -->
+     <!-- VISITOR POPUP -->
+  <div id="visitor-overlay" class="visitor-overlay">
+    <div class="visitor-card glass-card">
+      <button class="visitor-close" id="visitor-close-btn">✕</button>
+      <h2 class="visitor-title">Check in as a Visitor</h2>
+      <p class="visitor-subtitle">
+        If you’d like, share your email or mobile so I know who visited this portfolio.
+      </p>
+
+      <!-- 
+        This form uses FormSubmit.
+        Later, replace YOUR_REAL_EMAIL_HERE with your email (e.g., shamsheer123@gmail.com)
+      -->
+      <form
+        id="visitor-form"
+        action="https://formsubmit.co/achhukatlashamsheer@gmail.com"
+        method="POST"
+      >
+        <!-- FormSubmit options -->
+        <input type="hidden" name="_subject" value="New portfolio visitor ✨" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <div style="margin-bottom:0.7rem;">
+          <label for="visitorEmail">Email (optional)</label>
+          <input
+            id="visitorEmail"
+            name="email"
+            type="email"
+            placeholder="visitor@email.com"
+          />
+        </div>
+
+        <div style="margin-bottom:0.9rem;">
+          <label for="visitorPhone">Mobile (optional)</label>
+          <input
+            id="visitorPhone"
+            name="mobile"
+            type="text"
+            placeholder="+91-XXXXXXXXXX"
+          />
+        </div>
+
+        <button class="btn btn-primary" type="submit" style="width:100%; justify-content:center;">
+          Submit
+        </button>
+      </form>
+
+      <p class="visitor-note">
+        This is optional and only for tracking visits. You can close this and continue.
+      </p>
+    </div>
+  </div>
+  <!-- END VISITOR POPUP -->
+
+
+  <!-- NAVBAR -->
+ <header class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-text-main">SHAMSHEER A</div>
+        <div class="brand-text-sub">Mechanical • Developer • Aspirant</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero glass-card reveal">
+      <div class="hero-main">
+        <div class="hero-kicker">
+          <span class="dot"></span>
+          PORTFOLIO • 2025
+        </div>
+
+        <h1 class="hero-title">
+          Hey, I’m <span class="highlight">SHAMSHEER</span><br />
+          a curious mind building <span class="highlight">future tech</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          Mechanical engineering student, future UPSC / GATE aspirant, and
+          a developer who loves creating clean, modern experiences for the web and beyond.
+        </p>
+
+        <div class="hero-tags">
+          <div class="tag"><strong>Mechanical</strong> Engineering</div>
+          <div class="tag">GATE & UPSC Aspirant</div>
+          <div class="tag"><strong>Web</strong> & Android Enthusiast</div>
+          <div class="tag">Problem Solving • Logic</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">
+            <span class="btn-icon">🚀</span>
+            View Projects
+          </a>
+          <a href="about.html" class="btn btn-ghost">
+            <span class="btn-icon">👤</span>
+            More About Me
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE / METRICS -->
+      <aside class="hero-side glass-card">
+        <div class="hero-orbit"></div>
+        <div class="hero-inner">
+          <div class="pill">Snapshot</div>
+
+          <div class="metric-row">
+            <div class="metric-card">
+              <div class="metric-label">Focus</div>
+              <div class="metric-value">
+                <span class="neon">ME • GATE • UPSC</span>
+              </div>
+              <div class="metric-sub">
+                Strong fundamentals + aptitude + reasoning.
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Current Phase</div>
+              <div class="metric-value">
+                <span class="neon">B.Tech 3rd Year</span>
+              </div>
+              <div class="metric-sub">
+                Building core concepts & real skills.
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-stack">
+            <div class="tech-stack-title">Tech / Skills I’m exploring</div>
+            <div class="tech-chips">
+              <span class="chip">HTML • CSS • JS</span>
+              <span class="chip">Android (Java / Kotlin)</span>
+              <span class="chip">Python Basics</span>
+              <span class="chip">Data Structures</span>
+              <span class="chip">Aptitude & Reasoning</span>
+              <span class="chip">Mechanical Core</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- FEATURED PROJECTS PREVIEW -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Featured</div>
+          <h2 class="section-title">Selected Work</h2>
+        </div>
+        <div class="section-subtitle">
+          A quick peek into some things I’ve built / plan to build:
+          apps, websites, and learning experiments.
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="project-card glass-card">
+          <div class="project-tag">Android • Concept</div>
+          <h3 class="project-title">Encrypted Chat + File Sharing App</h3>
+          <p class="project-desc">
+            Concept for a secure, end-to-end encrypted communication app with
+            large file sharing, in-app video player, group calls, and an AI search bot.
+          </p>
+          <div class="project-meta">
+            <div class="project-tech">
+              <span>Android Studio</span>
+              <span>Firebase (idea)</span>
+              <span>Encryption</span>
+            </div>
+            <span>In Progress</span>
+          </div>
+        </article>
+
+        <article class="project-card glass-card">
+          <div class="project-tag">Web • Portfolio</div>
+          <h3 class="project-title">This Neon Glass Portfolio</h3>
+          <p class="project-desc">
+            A dark, glassmorphism-based personal portfolio designed to showcase
+            my journey from mechanical student to developer and future officer.
+          </p>
+          <div class="project-meta">
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <span>2025</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Direction</div>
+          <h2 class="section-title">Where I’m Heading</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="glass-card project-card">
+          <div class="project-tag">Exams</div>
+          <h3 class="project-title">GATE • SSC JE • UPSC</h3>
+          <p class="project-desc">
+            Preparing with a long-term mindset: strong concepts in mechanical,
+            solid aptitude, and consistent practice to target top ranks and
+            competitive posts.
+          </p>
+          <div class="project-meta">
+            <span>Mechanical • Strategy • Consistency</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card">
+          <div class="project-tag">Skills</div>
+          <h3 class="project-title">Developer Mindset</h3>
+          <p class="project-desc">
+            Learning to design and ship real products: clean UI, smooth UX,
+            good performance, and secure systems that people actually enjoy using.
+          </p>
+          <div class="project-meta">
+            <span>Web • Android • Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© 2025 • Built by SHAMSHEER A</span>
+      <div class="footer-links">
+        <span>Ready for opportunities.</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

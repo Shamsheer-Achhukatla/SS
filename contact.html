@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | SHAMSHEER A</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-text-main">SHAMSHEER A</div>
+        <div class="brand-text-sub">Mechanical • Developer • Aspirant</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <!-- CONTACT -->
+    <section class="section glass-card reveal">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h1 class="section-title">Let’s Talk</h1>
+        </div>
+        <p class="section-subtitle">
+          Want to discuss projects, collaboration, or exam strategy?  
+          Send me a message and I’ll try to respond as soon as possible.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <form onsubmit="event.preventDefault(); alert('This is a demo form. Connect via email or social links instead.');">
+          <div style="margin-bottom:0.9rem;">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div style="margin-bottom:0.9rem;">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="your@email.com" required />
+          </div>
+
+          <div style="margin-bottom:0.9rem;">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            <span class="btn-icon">📩</span>
+            Send Message (Demo)
+          </button>
+        </form>
+
+        <div class="glass-card project-card">
+          <div class="project-tag">Ways to Reach</div>
+          <h3 class="project-title">Contact Details</h3>
+          <p class="contact-meta">
+            You can customize this section with real links later.  
+            For now, here’s how someone could connect with me:
+          </p>
+          <ul class="project-desc" style="list-style:disc; padding-left:1.2rem; margin-top:0.6rem;">
+            <li>Email: <strong>youremail@example.com</strong></li>
+            <li>GitHub: <strong>github.com/your-username</strong></li>
+            <li>LinkedIn: <strong>linkedin.com/in/your-profile</strong></li>
+          </ul>
+          <p class="contact-meta" style="margin-top:0.8rem;">
+            Replace these placeholders with your actual email and links once
+            you’re ready to share this portfolio publicly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2025 • Contact • SHAMSHEER A</span>
+      <div class="footer-links">
+        <a href="index.html" style="text-decoration:none; color:inherit;">Back to Home</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
