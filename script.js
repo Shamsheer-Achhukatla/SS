@@ -1,26 +1,7 @@
-// ============= CONFIG =============
+// ===== PASSWORD CONFIG =====
 const SITE_PASSWORD = "shamme14";
 
-const BDAY_MONTH = 1;
-const BDAY_DAY = 25;
-
-// ============= THEME LOGIC =============
-function determineTheme(today) {
-  const month = today.getMonth() + 1;
-  const day = today.getDate();
-
-  if (month === BDAY_MONTH && day === BDAY_DAY) return "birthday";
-  if (month === 2 || month === 3) return "spring";
-  if (month >= 4 && month <= 6) return "summer";
-  if (month >= 7 && month <= 9) return "rainy";
-  return "winter";
-}
-
-function applySeasonalTheme() {
-  document.body.classList.add(`theme-${determineTheme(new Date())}`);
-}
-
-// ============= SCROLL REVEAL =============
+// ===== SCROLL REVEAL =====
 function setupScrollReveal() {
   const revealEls = document.querySelectorAll(".reveal");
   const onScroll = () => {
@@ -36,14 +17,12 @@ function setupScrollReveal() {
   onScroll();
 }
 
-// ============= PASSWORD GATE =============
+// ===== PASSWORD GATE =====
 function setupPasswordGate() {
   const overlay = document.getElementById("password-overlay");
   const input = document.getElementById("password-input");
   const button = document.getElementById("password-submit");
   const error = document.getElementById("password-error");
-
-  if (!overlay || !input || !button) return;
 
   if (sessionStorage.getItem("portfolioUnlocked") === "yes") {
     overlay.style.display = "none";
@@ -56,7 +35,7 @@ function setupPasswordGate() {
       setTimeout(() => {
         overlay.style.display = "none";
         sessionStorage.setItem("portfolioUnlocked", "yes");
-      }, 250);
+      }, 200);
     } else {
       error.style.display = "block";
       input.value = "";
@@ -64,15 +43,15 @@ function setupPasswordGate() {
     }
   };
 
-  button.addEventListener("click", check);
+  button.onclick = check;
   input.addEventListener("keydown", (e) => e.key === "Enter" && check());
-  setTimeout(() => input.focus(), 200);
 }
 
-// ============= EXIT INTENT POPUP =============
-function setupExitIntentPopup() {
+// ===== EXIT POPUP =====
+function setupExitPopup() {
   const overlay = document.getElementById("visitor-overlay");
-  if (!overlay) return;
+  const closeBtn = document.getElementById("visitor-close-btn");
+  const form = document.getElementById("visitor-form");
 
   document.addEventListener("mouseleave", (e) => {
     if (e.clientY <= 0 && localStorage.getItem("visitorFormDone") !== "yes") {
@@ -80,37 +59,16 @@ function setupExitIntentPopup() {
     }
   });
 
-  const closeBtn = document.getElementById("visitor-close-btn");
-  const form = document.getElementById("visitor-form");
+  closeBtn.onclick = () => overlay.style.display = "none";
 
-  closeBtn?.addEventListener("click", () => {
-    overlay.style.display = "none";
-  });
-
-  form?.addEventListener("submit", () => {
+  form.addEventListener("submit", () => {
     localStorage.setItem("visitorFormDone", "yes");
   });
 }
 
-// ============= PARALLAX FX =============
-function setupParallax() {
-  const hero = document.querySelector(".hero");
-  if (!hero) return;
-  hero.addEventListener("mousemove", (e) => {
-    const rect = hero.getBoundingClientRect();
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    hero.style.transform = `translateY(${y * 6}px)`;
-  });
-  hero.addEventListener("mouseleave", () => {
-    hero.style.transform = "translateY(0)";
-  });
-}
-
-// ============= INIT =============
+// ===== INIT =====
 document.addEventListener("DOMContentLoaded", () => {
-  applySeasonalTheme();
   setupScrollReveal();
   setupPasswordGate();
-  setupExitIntentPopup();
-  setupParallax();
+  setupExitPopup();
 });
