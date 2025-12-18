@@ -98,7 +98,6 @@ function setupParallax() {
   if (!hero) return;
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
     hero.style.transform = `translateY(${y * 6}px)`;
   });
@@ -112,6 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
   applySeasonalTheme();
   setupScrollReveal();
   setupPasswordGate();
-  setupExitIntentPopup(); // <-- NEW
+  setupExitIntentPopup();
   setupParallax();
 });
