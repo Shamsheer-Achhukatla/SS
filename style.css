@@ -921,3 +921,22 @@ body.theme-birthday {
   color: var(--muted);
   margin-top: 0.5rem;
 }
+/* ====== SMOOTH NEON COLOR SHIFT ====== */
+@keyframes neonShift {
+  0% {
+    --accent: #22d3ee;
+    --accent-2: #a855f7;
+  }
+  50% {
+    --accent: #fb923c;
+    --accent-2: #facc15;
+  }
+  100% {
+    --accent: #22d3ee;
+    --accent-2: #a855f7;
+  }
+}
+
+body {
+  animation: neonShift 9s ease-in-out infinite;
+}
